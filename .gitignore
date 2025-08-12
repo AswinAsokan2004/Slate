@@ -1,0 +1,18 @@
+# Flutter/Dart
+.dart_tool/
+.buildlog/
+.packages
+pubspec.lock
+build/
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

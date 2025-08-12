@@ -1,33 +1,62 @@
-# 🪞 Slate – AI-Powered Hand Gesture Recognition
+# 🖍️ Slate – Malayalam Letter Recognition for Kids
 
-Slate is a real-time **AI-based gesture recognition system** that predicts letters from hand gestures using a trained deep learning model. It comes with a **Flutter frontend** for a smooth user interface and a **Python backend** for AI inference.
+Slate is an **interactive learning application** designed especially for **kids and new Malayalam learners**. It uses an **ensemble CNN model** trained to recognize Malayalam letters from user-drawn inputs. The app provides an engaging and educational environment for children to practice writing Malayalam characters and receive instant feedback.
 
 ---
 
-## 📂 Project Structure
+## 📌 Features
+
+* **Kid-friendly Interface** – Simple, colorful, and intuitive.
+* **Malayalam Letter Recognition** – Detects letters drawn on screen.
+* **Real-time Feedback** – If the recognition probability is low, the app will suggest **"Try Again"**.
+* **CNN-based Ensemble Model** – Accurately identifies Malayalam letters from hand-drawn input.
+* **Interactive Drawing Board** – Users can draw a letter, which is then processed by the model.
+* **Offline Support** – Works locally after model download.
+
+---
+
+## 🏗️ Project Structure
 
 ```
-frontend/slate/lib/main.dart   # Flutter frontend entry point
-backend/main.py                # Python backend entry point
-model/gesture_model.tflite     # Trained gesture recognition model
+Slate/
+├── frontend/
+│   └── slate/lib/main.dart       # Flutter frontend main file
+├── backend/
+│   └── main.py                   # Python backend API server
+└── model/
+    └── malayalam_cnn_model       # Ensemble CNN model for letter recognition
 ```
 
-> The trained model can be downloaded here: [Gesture Model](https://drive.google.com/file/d/1yjp72ozSd7CQzlsVyVubqn9pd3jfIQqu/view?usp=sharing)
+---
+
+## 🚀 How It Works
+
+1. **User Draws a Letter** – On the digital slate in the frontend.
+2. **Image Capture** – The drawing is captured and sent to the backend.
+3. **Model Prediction** – The backend loads the trained CNN ensemble model.
+4. **Result Display** – If the probability is high, the predicted letter is shown. If low, the app says **"Try Again"**.
 
 ---
 
-## 🚀 Features
+## 📥 Model Download
 
-* **Real-time Gesture Detection** – Captures hand gestures via camera.
-* **Letter Prediction** – Predicts the corresponding letter for the detected gesture.
-* **Smooth UI** – Built with Flutter for an intuitive experience.
-* **Fast Backend Processing** – Python backend with TensorFlow Lite model.
+The trained ensemble CNN model can be downloaded here:
+[📎 Download Malayalam CNN Model](https://drive.google.com/file/d/1yjp72ozSd7CQzlsVyVubqn9pd3jfIQqu/view?usp=sharing)
+
+After downloading, place the model file in the `model/` directory inside the backend folder.
 
 ---
 
-## 🛠 Installation
+## 🛠️ Installation & Setup
 
-### Backend
+### 1️⃣ Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Slate
+```
+
+### 2️⃣ Backend Setup (Python)
 
 ```bash
 cd backend
@@ -35,7 +64,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Frontend
+### 3️⃣ Frontend Setup (Flutter)
 
 ```bash
 cd frontend/slate
@@ -45,14 +74,23 @@ flutter run
 
 ---
 
-## 🔮 How It Works
+## 🖥️ Tech Stack
 
-1. The frontend captures the video stream from the camera.
-2. The backend processes frames using the trained AI model.
-3. Predicted letters are sent back to the frontend in real time.
+* **Frontend:** Flutter (Dart)
+* **Backend:** Python (Flask/FastAPI)
+* **Model:** Convolutional Neural Network (CNN) Ensemble
+* **Target Audience:** Kids and Malayalam beginners
 
 ---
 
-## 📜 License
+## 📚 Future Improvements
 
-This project is licensed under the MIT License.
+* Add support for **all Malayalam compound letters**.
+* Improve accuracy for **imperfect handwriting**.
+* Add **voice feedback** for correct/incorrect predictions.
+
+---
+
+## 👨‍💻 Author
+
+Developed with ❤️ for children learning Malayalam.
